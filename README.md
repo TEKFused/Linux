@@ -10,7 +10,7 @@ sudo env EDITOR=nano crontab -e
 
 #### Number of users logged in today.
 ```bash
-bc <<< "$(lastlog -b 0 -t 1 | wc -l)-1
+bc <<< "$(lastlog -b 0 -t 1 | wc -l)-1"
 ```
 
 #### Get the last 25 failed logins.
