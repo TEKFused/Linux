@@ -3,6 +3,11 @@ Helpful Linux commands and scripts.
 
 ## Commands
 
+#### Edit Cron jobs using nano.
+```bash
+sudo env EDITOR=nano crontab -e
+```
+
 #### Number of users logged in today.
 ```bash
 bc <<< "$(lastlog -b 0 -t 1 | wc -l)-1
