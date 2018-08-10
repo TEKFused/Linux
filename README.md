@@ -1,6 +1,14 @@
 # Linux
 Helpful Linux commands and scripts.
 
+## Cron jobs
+
+#### Edit Cron jobs using nano.
+```bash
+# Path to root and cPanel user cron files: /var/spool/cron/
+sudo env EDITOR=nano crontab -e
+```
+
 ## File System Permissions
 
 ### View ownership.
@@ -27,11 +35,6 @@ gpasswd -d user group
 ```
 
 ## Commands
-
-#### Edit Cron jobs using nano.
-```bash
-sudo env EDITOR=nano crontab -e
-```
 
 #### Number of users logged in today.
 ```bash
