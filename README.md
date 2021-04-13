@@ -60,3 +60,8 @@ history | grep "$(date +%F)"
 ```bash
 history | grep "$(date +%F)" | wc -l
 ```
+
+#### Get the 10 largest files in a user's home directory.
+```bash
+du -ahx ~/ | sort -rh | head -10
+```
