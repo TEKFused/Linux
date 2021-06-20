@@ -65,3 +65,8 @@ history | grep "$(date +%F)" | wc -l
 ```bash
 du -ahx ~/ | sort -rh | head -10
 ```
+
+#### Search for text in files throughout the file system.
+```bash
+grep -rn '/home/mcog/public_html/wp-content/' -e 'portal/media'
+```
