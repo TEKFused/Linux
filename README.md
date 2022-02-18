@@ -78,12 +78,12 @@ grep -rn '/home/mcog/public_html/wp-content/' -e 'portal/media'
 
 ## Find Commands
 
-### Find files in current subdirectories that have a blank line before "<?php"
+### Find PHP files in current subdirectories that have a blank line before "<?php"
 ```bash
 find -name '*.php' | xargs grep -Pz '^[\s]+<\?' -l
 ```
 
-### Find files in current subdirectories that have a blank line after "?>"
+### Find PHP files in current subdirectories that have a blank line after "?>"
 ```bash
 find -name '*.php' | xargs grep -Pz '\?>[\s]+$' -l
 ```
