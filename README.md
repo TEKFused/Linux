@@ -70,3 +70,10 @@ du -ahx ~/ | sort -rh | head -10
 ```bash
 grep -rn '/home/mcog/public_html/wp-content/' -e 'portal/media'
 ```
+
+## Cron Jobs
+
+### List ALL cron jobs for ALL users
+
+```for user in $(cut -f1 -d: /etc/passwd); do crontab -u $user -l; done
+```
