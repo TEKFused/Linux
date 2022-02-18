@@ -8,6 +8,11 @@ Helpful Linux commands and scripts.
 # Path to root and cPanel user cron files: /var/spool/cron/
 sudo env EDITOR=nano crontab -e
 ```
+### List ALL cron jobs for ALL users.
+
+```bash
+for user in $(cut -f1 -d: /etc/passwd); do crontab -u $user -l; done
+```
 
 ## File System Permissions
 
@@ -69,11 +74,4 @@ du -ahx ~/ | sort -rh | head -10
 #### Search for text in files throughout the file system.
 ```bash
 grep -rn '/home/mcog/public_html/wp-content/' -e 'portal/media'
-```
-
-## Cron Jobs
-
-### List ALL cron jobs for ALL users
-
-```for user in $(cut -f1 -d: /etc/passwd); do crontab -u $user -l; done
 ```
